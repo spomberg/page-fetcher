@@ -9,7 +9,6 @@ request(url, (error, response, body) => {
     return;
   }
 
-  console.log(body);
   fs.writeFile(filePath, body, (err) => {
     if (err) throw err;
     console.log(`Downloaded and saved ${body.length} bytes to ${filePath}`);
